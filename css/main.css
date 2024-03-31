@@ -1,0 +1,16 @@
+/* main.css styling */
+
+nav, #navbar li ul {
+    display: inline-block;
+    list-style: none;
+}
+
+#backimage {
+    width: 100%;
+}
+
+.image-link {
+    text-decoration: none;
+}
+
+
