@@ -1,1 +1,1 @@
-cartlogo.png: https://www.istockphoto.com/illustrations/shopping-cart
+main/cart.svg:https://www.svgrepo.com/svg/80543/shopping-cart-outline
