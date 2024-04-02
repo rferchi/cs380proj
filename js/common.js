@@ -29,8 +29,14 @@ function createItemDisplay()
       for ( let c = 0; c < 4; c++ )
       {
          let cell = row.insertCell(c);
-         cell.innerHTML = `<img src=\"${items[itemslength].imageName}\" alt=\"${items[itemslength].name}\" width=\"200\" height=\"200\">` +
-                          `<p class="item-name">${items[itemslength].name}</p>`
+         cell.setAttribute("class", "item-element");
+         // Okay.
+         cell.innerHTML =  `<a href=\"itempage.html\"><img src=\"${items[itemslength].imageName}\" alt=\"${items[itemslength].name}\" width=\"100%\" height=\"100%\">` 
+                           +
+                           `<p class="item-price">$${items[itemslength].price}</p>`
+                           +
+                           `<p class="item-name">${items[itemslength].name}</p>`;
+
          
       }
    }
