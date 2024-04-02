@@ -1,0 +1,32 @@
+/* Where all the colors go for common parts of the page (navbar, footer, etc) */
+nav, li ul {
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.image-link {
+    text-decoration: none;
+}
+
+div.searcharea {
+    float: right;
+}
+
+div.navbar-container {
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+}
+
+.table-container {
+    padding: 10px;
+    
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+  }
