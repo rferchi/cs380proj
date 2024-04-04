@@ -111,26 +111,65 @@ class User
 
         return _user;
     }
-    // Add the item via object.
-    AddItemToCart( ...Item )
+
+    // Find item by name.
+    FindItemInCart( itemname )
     {
-        this.Items.push( ...Item );
-        User.Save( this );
+        let size = this.Items.length;
+        let i = 0;
+        for ( i = 0; i < size; i++ )
+        {
+            if ( itemname == this.Items[i].name )
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    // Add the item via object.
+    AddItemToCart( itemname )
+    {
+        let idx = this.FindItemInCart( itemname );
+        if ( idx > -1 )
+        {
+            alert("You already have this item in your cart!");
+            return;
+        }
+
+        // Find the item in the store and add it to the cart.
+        //let item = FindItemByName( itemname );
+        if ( item )
+        {
+            this.Items.push( item );
+            User.SaveUser( this );
+        }
+        else
+        {
+            // TODO: Redirect to an error website
+            window.location.href = "about:blank";
+        }
     }
 
     // Remove the item name.
     RemoveItemFromCart( itemname )
     {
-        // get the index for the item
-        let idx = this.Items.indexOf( itemname );
-
+        let idx = this.FindItemInCart( itemname );
+            
         // If it's valid, remove the item.
         if ( idx > -1 )
         {
             this.Items = this.Items.splice( idx, 1 );
         }
 
-        User.Save( this );
+        User.SaveUser( this );
+    }
+
+    RemoveAllFromCart()
+    {
+        this.Items.clear();
+        User.SaveUser( this );
     }
 
     //
@@ -150,7 +189,7 @@ class User
         for ( let i = 0; i < itemslength; i++ )
         {
             let li = document.createElement( "li" );
-            ul.appendChild(li);
+            ul.appendChild( li );
 
 
             // list of divs, start here.
