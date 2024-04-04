@@ -8,6 +8,8 @@ class Item
         this.price = _price;
         this.sale = clamp( _sale, 0.0, 1.0 );
         this.modPrice();
+        
+        console.log( this );
     }
 
     // Function to calculate the price given the sale and other elements
