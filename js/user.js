@@ -79,7 +79,8 @@ class User
         // It's fine if these are null, it just means that there's no info for them yet
         // Get the keys for the shipping info, and payment methods
 
-        try {
+        try
+        {
             this.shippingInfo = JSON.parse( window.localStorage.getItem( "user" ) ).shippingInfo;
             this.paymentMethods = JSON.parse( window.localStorage.getItem( "user" ) ).paymentMethods;
             // Find a cart, if not then make a new cart.
@@ -100,13 +101,14 @@ class User
     static CreateUser( jsonObj = null )
     {
         let _user = null;
+        
         if ( !jsonObj )
         {
             _user = new User();    
         }
         else
         {
-            _user = JSON.parse(jsonObj);
+            _user = JSON.parse( jsonObj );
         }
 
         return _user;
@@ -191,11 +193,10 @@ class User
             let li = document.createElement( "li" );
             ul.appendChild( li );
 
-
             // list of divs, start here.
-            let div = document.createElement("div");
+            let div = document.createElement( "div" );
 
-            div.setAttribute("id", `cart-item${(i+1)}`)
+            div.setAttribute("id", `cart-item`);
 
             li.appendChild( div );
         }   
