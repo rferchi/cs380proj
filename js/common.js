@@ -10,7 +10,7 @@ var user = null;
 // Let's start here!!!
 function startAccount()
 {  
-   window.localStorage.clear();
+   //window.localStorage.clear();
 
    var _user = User.CreateUser( window.localStorage.getItem( "user" ) );
    user = _user;

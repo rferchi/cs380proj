@@ -1,7 +1,7 @@
 class Item 
 {
     // Create an item
-    constructor( _name, _description, _price, _sale, jsonObj )
+    constructor( _name, _description, _price, _sale )
     {
         this.name = _name;
         this.description = _description;
@@ -13,7 +13,7 @@ class Item
     }
 
     // Function to calculate the price given the sale and other elements
-    // PARSE THIS IF PARSING FROM A JSON OBJECT!!!
+    // CALL THIS IF PARSING FROM A JSON OBJECT!!!
     modPrice()
     {
         // TODO: shipping/handling and taxes
