@@ -1,17 +1,40 @@
 /* Where all the colors go for common parts of the page (navbar, footer, etc) */
+
+a:visited,a:active,a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
 nav, li ul {
     display: inline-block;
     list-style: none;
-    margin: 10px;
-    text-decoration: none;
+    margin: 5px;
+    color: white;
+    a {
+        text-decoration: none;
+        padding: 20px 20px;
+        
+    }
+
+    a:visited {
+        color: inherit;
+    }
+
+    a:hover {
+        background-color: white;
+        color: black;
+    }
+
+
+}
+
+div.searcharea {
+    padding: 0;
 }
 
 .image-link {
     text-decoration: none;
-}
-
-div.searcharea {
-    float: right;
 }
 
 div.navbar-container {
@@ -23,5 +46,10 @@ div.navbar-container {
 
 .table-container {
     padding: 10px;
-    
+}
+
+.item-element {
+    border-style: groove;
+    border-radius: 10px;
+    text-align: center;
 }

@@ -36,7 +36,6 @@ function createItemDisplay()
                            `<p class="item-price">$${items[itemslength].price}</p>`
                            +
                            `<p class="item-name">${items[itemslength].name}</p>`;
-
          
       }
    }
