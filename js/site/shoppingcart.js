@@ -30,5 +30,5 @@ function createCartList()
         p.appendChild( document.createTextNode( "You have no items in your cart." ) );
     }
 
-    ul.appendChild( document.body );
+    //ul.appendChild( document.body );
 }

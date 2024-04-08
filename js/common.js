@@ -73,7 +73,7 @@ function createItemDisplay()
          
          // <a href="itempage.html">
          let a = document.createElement( "a" );
-         a.setAttribute( "href", "itempage.html");
+         a.setAttribute( "href", "shoppingitementry.html");
          cell.appendChild( a );
 
          // <img src="IMAGENAME" alt="ITEMNAME">
