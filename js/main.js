@@ -45,7 +45,7 @@ class User
 
         console.log( this );
     }
-    
+
     // items in the wishlist to display to the user. Show to user in /wishlists.html
     Wishlist = [];
 }
@@ -81,7 +81,7 @@ class Item
     price = "";
     // Sizes. These will be strings.
     sizes = [];
-    // Colors in hex. This will be displayed on the page as a circle with the color inside.
+    // List of colors in hex. This will be displayed on the page as a circle with the color inside.
     colors = [];
     // Sale - optional. Will modify the pricing.
     sale = 0;
@@ -123,6 +123,7 @@ class Cart
         subtotal = result;
     }
 
+    // Items 
     Items = [];
 
     // Calculated value based on everything in the list.
@@ -147,6 +148,7 @@ class ShippingInfo {
         this.ZIP = _ZIP;
         this.Country = _Country;
     }
+
     // Name for shipping.
     firstName = "";
     lastName = "";
@@ -188,8 +190,6 @@ class PaymentInfo {
     securityCode = "";
     // Expiration Date for card
     expireDate = new Date( "1-1-2100" );
-
     // Shipping Info.
     shippingInfo = null;
-
 }
