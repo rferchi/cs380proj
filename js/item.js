@@ -18,11 +18,11 @@ class Item
     {
         // TODO: shipping/handling and taxes
         // Do nothing.
-        if ( sale <= 0.0 )
+        if ( this.sale <= 0.0 )
             return;
 
         // sale.
-        this.price += ( this.price * sale ); 
+        this.price += ( this.price * this.sale ); 
     }
     
     // Name

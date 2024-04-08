@@ -90,7 +90,7 @@ class User
         {
             // Give them something so they're not empty.
             this.shippingInfo[0] = new ShippingInfo();
-            this.paymentMethods[0] = new PaymentInfo();
+            this.paymentMethods[0] = new PaymentInfo(); 
             this.cart = new Cart();
         }
 
@@ -117,11 +117,12 @@ class User
     // Find item by name.
     FindItemInCart( itemname )
     {
-        let size = this.Items.length;
+        // Don't check if there's nothing.
+        let size = this.cart.Items.length;
         let i = 0;
         for ( i = 0; i < size; i++ )
         {
-            if ( itemname == this.Items[i].name )
+            if ( itemname == this.cart.Items[i].name )
             {
                 return i;
             }
@@ -141,10 +142,10 @@ class User
         }
 
         // Find the item in the store and add it to the cart.
-        //let item = FindItemByName( itemname );
+        let item = FindItemByName( itemname );
         if ( item )
         {
-            this.Items.push( item );
+            this.cart.Items.push( item );
             User.SaveUser( this );
         }
         else
@@ -152,6 +153,7 @@ class User
             // TODO: Redirect to an error website
             window.location.href = "about:blank";
         }
+        console.log(`Added ${itemname} to cart`);
     }
 
     // Remove the item name.
@@ -162,7 +164,7 @@ class User
         // If it's valid, remove the item.
         if ( idx > -1 )
         {
-            this.Items = this.Items.splice( idx, 1 );
+            this.cart.Items = this.cart.Items.splice( idx, 1 );
         }
 
         User.SaveUser( this );
@@ -170,7 +172,7 @@ class User
 
     RemoveAllFromCart()
     {
-        this.Items.clear();
+        this.cart.Items.clear();
         User.SaveUser( this );
     }
 
@@ -179,7 +181,7 @@ class User
     {
         let ul = document.getElementById( "cart-list" );
 
-        let itemslength = this.Items.length;
+        let itemslength = this.cart.Items.length;
 
         if ( itemslength <= 0 )
         {

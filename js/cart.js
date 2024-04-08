@@ -2,7 +2,7 @@ class Cart
 {
     constructor()
     {
-        this.Items = null;
+        this.Items = [];
         this.subtotal = 0;
         console.log( this );
     }

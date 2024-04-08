@@ -108,7 +108,7 @@ function createItemDisplay()
          let button = document.createElement( "button" );
          button.setAttribute( "id", "button-addtocart");
          button.setAttribute( "name", "button-addtocart");
-         button.setAttribute( "onclick", `user.AddItemToCart( ${ items[counter].name } )`);
+         button.setAttribute( "onclick", `user.AddItemToCart( "${ items[counter].name }" )`);
          button.appendChild( document.createTextNode( "Add To Cart" ) );
 
          // Attach the button to the cell itself, not the a
@@ -117,7 +117,7 @@ function createItemDisplay()
          // Increment the counter
          counter++;
 
-         // Is the 
+         // Did we run out of items?
          if ( counter >= itemslength )
          {
             // Return early, we've run out of items to display.
