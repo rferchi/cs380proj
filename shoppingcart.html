@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
- 
+
+    <script src="js/json/storeitems.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/common.js"></script>
+
     <div class="navbar-container">
         <nav id="navbar">
             <li>
@@ -33,17 +39,16 @@
     <script src="js/common.js">
         startAccount();
     </script>
+
     
-    
-    <div class="table-container center">
-        <table id="items-display">
-        </table>
+    <div class="table-container">
+        <ul id="cart-list">
+
+        </ul>
 
         <script>
-            createItemDisplay(); // 
+            createItemDisplay(); 
         </script>
     </div>
-
-
 </body>
 </html> 

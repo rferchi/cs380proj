@@ -1,3 +1,13 @@
+var user = null;
+// Let's start here!!!
+function startAccount()
+{
+   var _user = User.CreateUser( window.localStorage.getItem( "user" ) );
+   user = _user;
+   User.SaveUser( user );
+   
+}
+
 // clamp: function to clamp a value between the min and max values.
 // value: the value being clamped
 // min: the minimum value possible
