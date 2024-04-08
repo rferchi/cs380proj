@@ -52,13 +52,17 @@ class Cart
 
     RemoveFromCart( ...Item )
     {
-        for ( let i = 0; i < Item.length; i++ )
+        if ( Item.length > 1)
         {
-            if ( Item[i] == this.Items.find( Item ) )
+            for ( let i = 0; i < Item.length; i++ )
             {
-                //this.Items.
+                
             }
         }
+        else
+        {
+            this.Items = this.Items.filter(v => v !== Item);
+        } 
     }
 
     // Call this function to calculate the subtotal.
