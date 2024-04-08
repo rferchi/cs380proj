@@ -89,8 +89,6 @@ class User
         catch ( err )
         {
             // Give them something so they're not empty.
-            this.shippingInfo[0] = new ShippingInfo();
-            this.paymentMethods[0] = new PaymentInfo(); 
             this.cart = new Cart();
         }
 
@@ -100,8 +98,8 @@ class User
     // Create a user given a json object (extract from localstorage).
     static CreateUser( jsonObj = null )
     {
-        let _user = null;
-        
+        let _user;
+           
         if ( !jsonObj )
         {
             _user = new User();    

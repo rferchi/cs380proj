@@ -1,21 +1,12 @@
 // Important global variables!!!
 
 // Parse our store items.
-var items = JSON.parse( storecontent );
+const items = JSON.parse( storecontent );
 // Username.
-var user = null;
+const user = User.CreateUser( window.localStorage.getItem( "user" ) );
 
+console.log( user );
 // End global variables
-
-// Let's start here!!!
-function startAccount()
-{  
-   //window.localStorage.clear();
-
-   var _user = User.CreateUser( window.localStorage.getItem( "user" ) );
-   user = _user;
-   User.SaveUser( user );
-}
 
 // clamp: function to clamp a value between the min and max values.
 // value: the value being clamped
@@ -104,15 +95,17 @@ function createItemDisplay()
          p2.appendChild( document.createTextNode(`${items[counter].name}`) );
          a.appendChild( p2 );
 
+
+         // TODO: Put this on the shopping page.
          // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>
-         let button = document.createElement( "button" );
-         button.setAttribute( "id", "button-addtocart");
-         button.setAttribute( "name", "button-addtocart");
-         button.setAttribute( "onclick", `user.AddItemToCart( "${ items[counter].name }" )`);
-         button.appendChild( document.createTextNode( "Add To Cart" ) );
+         //let button = document.createElement( "button" );
+         //button.setAttribute( "id", "button-addtocart");
+         //button.setAttribute( "name", "button-addtocart");
+         //button.setAttribute( "onclick", `user.AddItemToCart( "${ items[counter].name }" )`);
+         //button.appendChild( document.createTextNode( "Add To Cart" ) );
 
          // Attach the button to the cell itself, not the a
-         cell.appendChild( button );
+         //cell.appendChild( button );
 
          // Increment the counter
          counter++;
