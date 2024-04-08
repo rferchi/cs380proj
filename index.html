@@ -10,7 +10,7 @@
     <div class="navbar-container">
         <nav id="navbar">
             <li>
-                <a class="image-link" href="index.html"><img src="images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a> 
+                <ul><a class="image-link" href="index.html"><img src="images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a></ul>
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="women.html">Women</a></ul>
                 <ul><a href="men.html">Men</a></ul>
@@ -18,7 +18,10 @@
                 <ul><a href="girls.html">Girls</a></ul>
                 <ul>
                     <div class="searcharea">
-                        <!-- make search form here -->
+                        <form id="searchform" name="" action="searchresults.html" method="GET">
+                            <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
+                            <input type="submit">
+                        </form>
                     </div>
                 </ul>
             </li>
