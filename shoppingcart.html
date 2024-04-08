@@ -6,28 +6,24 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="js/json/storeitems.js"></script>
-    <script src="js/item.js"></script>
-    <script src="js/cart.js"></script>
-    <script src="js/user.js"></script>
-    <script src="js/common.js"></script>
-
     <div class="navbar-container">
         <nav id="navbar">
-            <li>
-                <a class="image-link" href="index.html"><img src="images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a> 
-                <ul><a href="index.html">Home</a></ul>
-                <ul><a href="women.html">Women</a></ul>
-                <ul><a href="men.html">Men</a></ul>
-                <ul><a href="boys.html">Boys</a></ul>
-                <ul><a href="girls.html">Girls</a></ul>
-                <div class="searcharea">
-                    <form id="searchform" name="" action="searchresults.html" method="GET">
-                        <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
-                        <input type="submit">
-                    </form>
-                </div>
-            </li>
+            <ul>
+                <li><a class="image-link" href="index.html"><img src="images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="boys.html">Boys</a></li>
+                <li><a href="girls.html">Girls</a></li>
+                <li>
+                    <div class="searcharea">
+                        <form id="searchform" name="" action="searchresults.html" method="GET">
+                            <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
+                            <input type="submit">
+                        </form>
+                    </div>
+                </li>
+            </ul>
         </nav>
     </div>
 </head>
@@ -38,7 +34,16 @@
     <script src="js/objects/cart.js"></script>
     <script src="js/objects/user.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/site/shoppingcart.js"></script>
+    
+    <ul id="cart-list">
+        <li></li>
+    </ul>
 
+    <script>
+        createCartList();
+    </script>
+    
 
 </body>
 </html> 

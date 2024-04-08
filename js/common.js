@@ -2,10 +2,9 @@
 
 // Parse our store items.
 const items = JSON.parse( storecontent );
-// Username.
+// User
 const user = User.CreateUser( window.localStorage.getItem( "user" ) );
 
-console.log( user );
 // End global variables
 
 // clamp: function to clamp a value between the min and max values.

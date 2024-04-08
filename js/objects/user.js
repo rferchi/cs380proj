@@ -174,34 +174,6 @@ class User
         User.SaveUser( this );
     }
 
-    //
-    DisplayCartContents()
-    {
-        let ul = document.getElementById( "cart-list" );
-
-        let itemslength = this.cart.Items.length;
-
-        if ( itemslength <= 0 )
-        {
-            // Display: You have no items in the cart.
-            return;
-        }
-
-        // 
-        for ( let i = 0; i < itemslength; i++ )
-        {
-            let li = document.createElement( "li" );
-            ul.appendChild( li );
-
-            // list of divs, start here.
-            let div = document.createElement( "div" );
-
-            div.setAttribute("id", `cart-item`);
-
-            li.appendChild( div );
-        }   
-    }
-
     // Static function to save your progress on shopping.
     static SaveUser( user )
     {
