@@ -2,9 +2,6 @@ class Cart
 {
     constructor()
     {
-        this.Items = [];
-        this.subtotal = 0;
-        console.log( this );
     }
     
     // Items 
