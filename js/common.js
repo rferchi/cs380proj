@@ -1,11 +1,5 @@
-// Important global variables!!!
-
-// Parse our store items.
-const items = JSON.parse( storecontent );
-// User
+const items = JSON.parse( storecontent ); 
 const user = User.CreateUser( window.localStorage.getItem( "user" ) );
-
-// End global variables
 
 // clamp: function to clamp a value between the min and max values.
 // value: the value being clamped
@@ -61,39 +55,40 @@ function createItemDisplay()
 
    // Items in that parsed list
    let itemslength = items.length;
-   for ( let r = 0; r < 5; r++ )
+
+   // 5 * 4 = 20 possible items on a page. This can be changed later depending on where this list
+   // is going to go
+   for ( let r = 0; r < 5; r++ )             // 5 rows possible
    {
       // <tr>
       let row = table.insertRow( r );
-      for ( let c = 0; c < 4; c++ )
+      for ( let c = 0; c < 4; c++ )          // 4 cells per row
       {
          // <td class="item-element">
          let cell = row.insertCell(c);
          cell.setAttribute( "class", "item-element" );
-         
-         // <a href="itempage.html">
-         let a = document.createElement( "a" );
-         a.setAttribute( "href", "itempage.html");
-         cell.appendChild( a );
 
          // <img src="IMAGENAME" alt="ITEMNAME">
          let img = document.createElement( "img" );
-         img.setAttribute( "src", `${items[counter].imageName}` );
+         img.setAttribute( "src", `${items[counter].mediumImageNames[0]}` );
          img.setAttribute( "alt", `${items[counter].name}`);
-         a.appendChild( img );
+         cell.appendChild( img );
 
          // <p class="item-price">ITEMPRICE</p> 
          let p = document.createElement( "p" );
          p.setAttribute( "class", "item-price" );
          p.appendChild( document.createTextNode(`${items[counter].price}`) );
-         a.appendChild( p );
+         cell.appendChild( p );
 
          // <p class="item-name">ITEMNAME</p> 
          let p2 = document.createElement( "p" );
          p2.setAttribute( "class", "item-name" );
          p2.appendChild( document.createTextNode(`${items[counter].name}`) );
-         a.appendChild( p2 );
+         cell.appendChild( p2 );
 
+         cell.addEventListener("click", (event) => {
+            window.location.href = "shoppingitementry.html" + `?item=${items[c].name}`; 
+         } );
 
          // TODO: Put this on the shopping page.
          // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>
@@ -115,6 +110,7 @@ function createItemDisplay()
             // Return early, we've run out of items to display.
             return;
          }
+
       }
    }
 }

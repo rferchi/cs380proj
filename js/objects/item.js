@@ -27,15 +27,22 @@ class Item
     name = "";
     // Description
     description = "";
-    // Filename.
-    imageName = "";
+
+    // Big image names
+    bigImageNames = [];
+
+    // Medium image names (item preview)
+    mediumImageNames = [];
+
+    // Small image names (thumbnails)
+    smallImageNames = [];
     // Price
     price = "";
     // Sizes. These will be strings.
     sizes = [];
     // List of colors in hex. This will be displayed on the page as a circle with the color inside.
     colors = [];
-    // Sale - optional. Will modify the pricing.
+    // Sale - optional. Will modify the pricing. 
     sale = 0;
     // Tax
     tax = 0;

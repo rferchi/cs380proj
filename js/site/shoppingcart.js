@@ -20,7 +20,24 @@ function createCartList()
             img.setAttribute( "alt", `${user.cart.Items[i].name}` );
             div.appendChild( img );
 
-            //TODO: FINISH THIS !!!
+            let p = document.createElement( "p" );
+            p.setAttribute( "id", "item-name");
+            p.appendChild( document.createTextNode( `${user.cart.Items[i].name}` ) );
+            div.appendChild( p );
+
+            let p2 = document.createElement( "p" );
+            p2.setAttribute( "id", "item-price" );
+            p2.appendChild( document.createTextNode( `${user.cart.Items[i].price}`) );
+            div.appendChild( p2 );
+
+            // Remove button
+            let button = document.createElement( "button" );
+            button.setAttribute( "name", "button-removeitem" );
+            button.setAttribute( "id", "button-removeitem" );
+            button.setAttribute( "onclick", `user.RemoveItemFromCart( ${user.cart.Items[i].name} )` );
+            button.appendChild( document.createTextNode( "Remove" ) );
+            div.appendChild( button );
+
         }
     }
     else
@@ -30,5 +47,5 @@ function createCartList()
         p.appendChild( document.createTextNode( "You have no items in your cart." ) );
     }
 
-    ul.appendChild( document.body );
+    //ul.appendChild( document.body );
 }
