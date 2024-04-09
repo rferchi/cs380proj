@@ -1,1 +1,46 @@
-<!-- item entry page, results are dynamically put in via javascript -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/json/storeitems.js"></script>
+
+    <!-- TODO: make js to generate this nav bar so I don't have to modify 5 variants of this every time a change happens -->
+    <div id="navbar-container">
+        <nav id="navbar">
+            <ul>
+                <li><a class="image-link" href="index.html"><img src="images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories/women.html">Women</a></li>
+                <li><a href="categories/men.html">Men</a></li>
+                <li><a href="categories/boys.html">Boys</a></li>
+                <li><a href="categories/girls.html">Girls</a></li>
+                <li><a href="shoppingcart.html">Cart</a></li>
+                <div class="searcharea">
+                    <form id="searchform" name="" action="searchresults.html" method="GET">
+                        <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
+                        <input type="submit">
+                    </form>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</head>
+
+<body>
+    <script src="js/objects/item.js"></script>
+    <script src="js/objects/cart.js"></script>
+    <script src="js/objects/user.js"></script> 
+    <script src="js/common.js"></script>
+    <script src="js/site/shoppingitementry.js"></script>
+
+    <div id="item-card">
+        
+        
+    </div>
+
+
+</body>
+</html> 

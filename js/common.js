@@ -1,11 +1,5 @@
-// Important global variables!!!
-
-// Parse our store items.
-const items = JSON.parse( storecontent );
-// User
+const items = JSON.parse( storecontent ); 
 const user = User.CreateUser( window.localStorage.getItem( "user" ) );
-
-// End global variables
 
 // clamp: function to clamp a value between the min and max values.
 // value: the value being clamped
@@ -70,29 +64,23 @@ function createItemDisplay()
          // <td class="item-element">
          let cell = row.insertCell(c);
          cell.setAttribute( "class", "item-element" );
-         
-         // <a href="itempage.html">
-         let a = document.createElement( "a" );
-         a.setAttribute( "href", "shoppingitementry.html");
-         cell.appendChild( a );
 
          // <img src="IMAGENAME" alt="ITEMNAME">
          let img = document.createElement( "img" );
          img.setAttribute( "src", `${items[counter].imageName}` );
          img.setAttribute( "alt", `${items[counter].name}`);
-         a.appendChild( img );
 
          // <p class="item-price">ITEMPRICE</p> 
          let p = document.createElement( "p" );
          p.setAttribute( "class", "item-price" );
          p.appendChild( document.createTextNode(`${items[counter].price}`) );
-         a.appendChild( p );
+         cell.appendChild( p );
 
          // <p class="item-name">ITEMNAME</p> 
          let p2 = document.createElement( "p" );
          p2.setAttribute( "class", "item-name" );
          p2.appendChild( document.createTextNode(`${items[counter].name}`) );
-         a.appendChild( p2 );
+         cell.appendChild( p2 );
 
 
          // TODO: Put this on the shopping page.
@@ -106,6 +94,9 @@ function createItemDisplay()
          // Attach the button to the cell itself, not the a
          //cell.appendChild( button );
 
+
+
+
          // Increment the counter
          counter++;
 
@@ -115,6 +106,12 @@ function createItemDisplay()
             // Return early, we've run out of items to display.
             return;
          }
+         
+         cell.addEventListener("click", (event) => {
+            let el = event.target;
+            window.location.href = "shoppingitementry.html" + `?item=${items[counter].name}`; 
+         } );
+
       }
    }
 }

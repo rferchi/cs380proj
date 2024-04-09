@@ -1,50 +1,50 @@
-/* Where all the colors go for common parts of the page (navbar, footer, etc) */
+/* Where all the styles go for common parts of the page (navbar, footer, etc) */
+body {
+    padding-top: 70px;
+}
 
 a:visited,a:active,a {
     color: inherit;
     text-decoration: none;
 }
 
-nav, ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 5px;
-    color: white;
-
-    a {
-        text-decoration: none;
-        padding: 20px 20px;
-    }
-
-    a:visited {
-        color: inherit;
-    }
-
-    a:hover {
-        background-color: white;
-        color: black;
-    }
-
-
-}
-
-div.searcharea {
-    padding: 0;
-}
-
-.image-link {
-    text-decoration: none;
-}
-
-div.navbar-container {
+div#navbar-container {
     background-color: black;
     color: white;
-    margin: 0px;
-    padding: 10px;
-}
+    width: 100%;
+    height: 70px;
+    
+    /* sticky header stuff below https://stackoverflow.com/a/14288780 */
+    position: fixed;
+    /*render over everything*/
+    z-index: 1030;
+    /* "Stick" to the top and left part of the page*/
+    top:0;
+    left:0;
+    
+    nav,ul li,.searcharea {
+        display: inline-block;
+        list-style: none;
+        color: white;
+    
+        a {
+            text-decoration: none;
+            padding: 20px 20px;
+        }
+    
+        a:visited {
+            color: inherit;
+        }
+    
+        a:hover {
+            background-color: white;
+            color: black;
+        }
 
-.table-container {
-    padding: 5px;
+        .image-link {
+            text-decoration: none;
+        }
+    }
 }
 
 .item-element {
