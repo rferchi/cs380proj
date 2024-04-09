@@ -55,11 +55,14 @@ function createItemDisplay()
 
    // Items in that parsed list
    let itemslength = items.length;
-   for ( let r = 0; r < 5; r++ )
+
+   // 5 * 4 = 20 possible items on a page. This can be changed later depending on where this list
+   // is going to go
+   for ( let r = 0; r < 5; r++ )             // 5 rows possible
    {
       // <tr>
       let row = table.insertRow( r );
-      for ( let c = 0; c < 4; c++ )
+      for ( let c = 0; c < 4; c++ )          // 4 cells per row
       {
          // <td class="item-element">
          let cell = row.insertCell(c);
@@ -67,8 +70,9 @@ function createItemDisplay()
 
          // <img src="IMAGENAME" alt="ITEMNAME">
          let img = document.createElement( "img" );
-         img.setAttribute( "src", `${items[counter].imageName}` );
+         img.setAttribute( "src", `${items[counter].mediumImageNames[0]}` );
          img.setAttribute( "alt", `${items[counter].name}`);
+         cell.appendChild( img );
 
          // <p class="item-price">ITEMPRICE</p> 
          let p = document.createElement( "p" );
@@ -82,6 +86,9 @@ function createItemDisplay()
          p2.appendChild( document.createTextNode(`${items[counter].name}`) );
          cell.appendChild( p2 );
 
+         cell.addEventListener("click", (event) => {
+            window.location.href = "shoppingitementry.html" + `?item=${items[c].name}`; 
+         } );
 
          // TODO: Put this on the shopping page.
          // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>
@@ -94,9 +101,6 @@ function createItemDisplay()
          // Attach the button to the cell itself, not the a
          //cell.appendChild( button );
 
-
-
-
          // Increment the counter
          counter++;
 
@@ -106,11 +110,6 @@ function createItemDisplay()
             // Return early, we've run out of items to display.
             return;
          }
-         
-         cell.addEventListener("click", (event) => {
-            let el = event.target;
-            window.location.href = "shoppingitementry.html" + `?item=${items[counter].name}`; 
-         } );
 
       }
    }

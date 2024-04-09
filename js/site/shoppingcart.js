@@ -37,7 +37,6 @@ function createCartList()
             button.setAttribute( "onclick", `user.RemoveItemFromCart( ${user.cart.Items[i].name} )` );
             button.appendChild( document.createTextNode( "Remove" ) );
             div.appendChild( button );
-            
 
         }
     }
