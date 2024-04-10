@@ -4,43 +4,493 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/women.css">
 
-    <div id="navbar-container">
-        <nav id="navbar">
-            <ul>
-                <li><a class="image-link" href="index.html"><img src="../images/main/logoTEMP.svg" width="30" height="30" alt="logo"></a></li>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="women.html">Women</a></li>
-                <li><a href="men.html">Men</a></li>
-                <li><a href="boys.html">Boys</a></li>
-                <li><a href="girls.html">Girls</a></li>
-                <li><a href="../shoppingcart.html">Cart</a></li>
-                <div class="searcharea">
-                    <form id="searchform" name="" action="../searchresults.html" method="GET">
-                        <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
-                        <input type="submit">
-                    </form>
-                </div>
+    <nav>
+        <!-- logo -->
+        <div id="navbar-left">
+          
+        </div>
+        
+        <div id="navbar-center">
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories/women.html">Women</a></li>
+                <li><a href="categories/men.html">Men</a></li>
+                <li><a href="categories/boys.html">Boys</a></li>
+                <li><a href="categories/girls.html">Girls</a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+
+
+        <div id="navbar-right">
+            <div class="searcharea">
+                <form id="searchform" name="" action="searchresults.html" method="GET">
+                    <input type="text" id="txtbox-search" name="search" placeholder="Search...">  
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </nav>
 </head>
 
 <body>
 
     <script src="js/json/storeitems.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/objects/item.js"></script>
-    <script src="js/objects/cart.js"></script>
-    <script src="js/objects/user.js"></script>
-
+    <script src="js/item.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/common.js">
+    </script>
 
     <div class="table-container">
-        <table id="items-display">
-        </table>
+        <section id="items-display">
+            <h2>Women Causal Sneakers</h2>
+            <div class="zoom" id="Blazers-black">
+                <img src="/images/women/nike blazers /CZ1055_100_P1.jpeg" alt="nike black and white blazers">
+                <h4>2 colors</h6>
+                <hr>
+                <h3>Women's Nike Blazer Mid '77 Casual Shoes</h5>
+                <h4>$105.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star1" name="stars" value="1">
+                    <label for="star1" title="text"> 1 star</label>
+                    <input type="radio" id="star2" name="stars" value="2">
+                    <label for="star2" title="text"> 2 stars</label>
+                    <input type="radio" id="star3" name="stars" value="3">
+                    <label for="star3" title="text"> 3 stars</label>
+                    <input type="radio" id="star4" name="stars" value="4">
+                    <label for="star4" title="text"> 4 stars</label>
+                    <input type="radio" id="star5" name="stars" value="5">
+                    <label for="star5" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+            
+            <div class="zoom" id="Blazer-pink">
+                <img src="/images/women/nike blazers /CZ1055_118_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Blazer Mid '77 Casual Shoes</h3>
+                <h4>$105.00</h4>
+                 <div class ="stars">
+                    <input type="radio" id="star6" name="stars" value="1">
+                    <label for="star6" title="text"> 1 star</label>
+                    <input type="radio" id="star7" name="stars" value="2">
+                    <label for="star7" title="text"> 2 stars</label>
+                    <input type="radio" id="star8" name="stars" value="3">
+                    <label for="star8" title="text"> 3 stars</label>
+                    <input type="radio" id="star9" name="stars" value="4">
+                    <label for="star9" title="text"> 4 stars</label>
+                    <input type="radio" id="star10" name="stars" value="5">
+                    <label for="star10" title="text"> 5 stars</label>
+                    
+                </div>
+            </div>
 
+            <div class="zoom" id="Dunks-black">
+                <img src="/images/women/nike dunks/DD1503_101_P1.jpeg" alt="nike black and white blazers">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Dunk Low Retro Casual Shoes</h3>
+                <h4>$105.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star11" name="stars" value="1">
+                    <label for="star11" title="text"> 1 star</label>
+                    <input type="radio" id="star12" name="stars" value="2">
+                    <label for="star12" title="text"> 2 stars</label>
+                    <input type="radio" id="star13" name="stars" value="3">
+                    <label for="star13" title="text"> 3 stars</label>
+                    <input type="radio" id="star14" name="stars" value="4">
+                    <label for="star14" title="text"> 4 stars</label>
+                    <input type="radio" id="star15" name="stars" value="5">
+                    <label for="star15" title="text"> 5 stars</label>
+                    
+                </div>
+            </div>
+
+            <div class="zoom" id="Dunks-rose-whisper">
+                <img src="/images/women/nike dunks/DD1503_118_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Dunk Low Retro Casual Shoes</h3>
+                <h4>$105.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star16" name="stars" value="1">
+                    <label for="star16" title="text"> 1 star</label>
+                    <input type="radio" id="star17" name="stars" value="2">
+                    <label for="star17" title="text"> 2 stars</label>
+                    <input type="radio" id="star18" name="stars" value="3">
+                    <label for="star18" title="text"> 3 stars</label>
+                    <input type="radio" id="star19" name="stars" value="4">
+                    <label for="star19" title="text"> 4 stars</label>
+                    <input type="radio" id="star20" name="stars" value="5">
+                    <label for="star20" title="text"> 5 stars</label>
+                    
+                </div>
+
+            </div>
+
+           <div class="zoom" id="airForce-white">
+                <img src="/images/women/nike force/DD8959_100_P2.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Air Force 1 '07 CASUAL SHOES</h3>
+                <h4>$115.00</h4>
+                <div class ="stars"><input type="radio" id="star21" name="stars" value="1">
+                    <label for="star21" title="text"> 1 star</label>
+                    <input type="radio" id="star22" name="stars" value="2">
+                    <label for="star22" title="text"> 2 stars</label>
+                    <input type="radio" id="star23" name="stars" value="3">>
+                    <label for="star23" title="text"> 3 stars</label>
+                    <input type="radio" id="star24" name="stars" value="4">
+                    <label for="star24" title="text"> 4 stars</label>
+                    <input type="radio" id="star25" name="stars" value="5">
+                    <label for="star25" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="airForce-orange">
+                <img src="/images/women/nike force/DD8959_115_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Air Force 1 '07 CASUAL SHOES</h3>
+                <h4>$115.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star26" name="stars" value="1">
+                    <label for="star26" title="text"> 1 star</label>
+                    <input type="radio" id="star27" name="stars" value="2">
+                    <label for="star27" title="text"> 2 stars</label>
+                    <input type="radio" id="star28" name="stars" value="3">
+                    <label for="star28" title="text"> 3 stars</label>
+                    <input type="radio" id="star29" name="stars" value="4">
+                    <label for="star29" title="text"> 4 stars</label>
+                    <input type="radio" id="star30" name="stars" value="5">
+                    <label for="star30" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="vapormax-cottoncandy">
+                <img src="/images/women/nike vapormax/FD0823_500_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Air Vapormax Plus Running Shoes</h3>
+                <h4>$210.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star31" name="stars" value="1">
+                    <label for="star31" title="text"> 1 star</label>
+                    <input type="radio" id="star32" name="stars" value="2">
+                    <label for="star32" title="text"> 2 stars</label>
+                    <input type="radio" id="star33" name="stars" value="3">
+                    <label for="star33" title="text"> 3 stars</label>
+                    <input type="radio" id="star34" name="stars" value="4">
+                    <label for="star34" title="text"> 4 stars</label>
+                    <input type="radio" id="star35" name="stars" value="5">
+                    <label for="star35" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="vapormax-pink">
+                <img src="/images/women/nike vapormax/FZ3614_686_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Nike Air Vapormax Plus Running Shoes</h3>
+                <h4>$210.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star36" name="stars" value="1">
+                    <label for="star36" title="text"> 1 star</label>
+                    <input type="radio" id="star37" name="stars" value="2">
+                    <label for="star37" title="text"> 2 stars</label>
+                    <input type="radio" id="star38" name="stars" value="3">
+                    <label for="star38" title="text"> 3 stars</label>
+                    <input type="radio" id="star39" name="stars" value="4">
+                    <label for="star39" title="text"> 4 stars</label>
+                    <input type="radio" id="star40" name="stars" value="5">
+                    <label for="star40" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="NB-530-grey">
+                <img src="/images/women/new blance/MR530CK_161_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's New Balance 530 Causal Shoes</h3>
+                <h4>$100.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star41" name="stars" value="1">
+                    <label for="star41" title="text"> 1 star</label>
+                    <input type="radio" id="star42" name="stars" value="2">
+                    <label for="star42" title="text"> 2 stars</label>
+                    <input type="radio" id="star43" name="stars" value="3">
+                    <label for="star43" title="text"> 3 stars</label>
+                    <input type="radio" id="star44" name="stars" value="4">
+                    <label for="star44" title="text"> 4 stars</label>
+                    <input type="radio" id="star45" name="stars" value="5">
+                    <label for="star45" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="NB-530-beige">
+                <img src="/images/women/new blance/MR530OW_108_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's New Balance 530 Causal Shoes</h3>
+                <h4>$100.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star46" name="stars" value="1">
+                    <label for="star46" title="text"> 1 star</label>
+                    <input type="radio" id="star47" name="stars" value="2">
+                    <label for="star47" title="text"> 2 stars</label>
+                    <input type="radio" id="star48" name="stars" value="3">
+                    <label for="star48" title="text"> 3 stars</label>
+                    <input type="radio" id="star49" name="stars" value="4">
+                    <label for="star49" title="text"> 4 stars</label>
+                    <input type="radio" id="star50" name="stars" value="5">
+                    <label for="star50" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="NB-550-grey">
+                <img src="/images/women/NB 550/BBW550BB_100_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's New Balance 550 Causal Shoes</h3>
+                <h4>$120.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star51" name="stars" value="1">
+                    <label for="star51" title="text"> 1 star</label>
+                    <input type="radio" id="star52" name="stars" value="2">
+                    <label for="star52" title="text"> 2 stars</label>
+                    <input type="radio" id="star53" name="stars" value="3">
+                    <label for="star53" title="text"> 3 stars</label>
+                    <input type="radio" id="star54" name="stars" value="4">
+                    <label for="star54" title="text"> 4 stars</label>
+                    <input type="radio" id="star55" name="stars" value="5">
+                    <label for="star55" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="NB-550-green">
+                <img src="/images/women/NB 550/BBW550BI_073_P1.jpeg">
+                <h4>3 colors</h4>
+                <hr>
+                <h3>Women's New Balance 550 Causal Shoes</h3>
+                <h4>$120.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star56" name="stars" value="1">
+                    <label for="star56" title="text"> 1 star</label>
+                    <input type="radio" id="star57" name="stars" value="2">
+                    <label for="star57" title="text"> 2 stars</label>
+                    <input type="radio" id="star58" name="stars" value="3">
+                    <label for="star58" title="text"> 3 stars</label>
+                    <input type="radio" id="star59" name="stars" value="4">
+                    <label for="star59" title="text"> 4 stars</label>
+                    <input type="radio" id="star60" name="stars" value="5">
+                    <label for="star60" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+
+            <div class="zoom" id="NB-550-nude">
+                <img src="/images/women/NB 550/BBW550JS_108_P2.jpeg">
+                <h4>3 colors</h4>
+                <hr>
+                <h3>Women's New Balance 550 Causal Shoes</h3>
+                <h4>$120.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star61" name="stars" value="1">
+                    <label for="star61" title="text"> 1 star</label>
+                    <input type="radio" id="star62" name="stars" value="2">
+                    <label for="star62" title="text"> 2 stars</label>
+                    <input type="radio" id="star63" name="stars" value="3">
+                    <label for="star63" title="text"> 3 stars</label>
+                    <input type="radio" id="star64" name="stars" value="4">
+                    <label for="star64" title="text"> 4 stars</label>
+                    <input type="radio" id="star65" name="stars" value="5">
+                    <label for="star65" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Jordan-1-blue">
+                <img src="/images/women/jordans 1/BQ6472_140_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 1 Causal Shoes</h3>
+                <h4>$125.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star66" name="stars" value="1">
+                    <label for="star66" title="text"> 1 star</label>
+                    <input type="radio" id="star67" name="stars" value="2">
+                    <label for="star67" title="text"> 2 stars</label>
+                    <input type="radio" id="star68" name="stars" value="3">
+                    <label for="star68" title="text"> 3 stars</label>
+                    <input type="radio" id="star69" name="stars" value="4">
+                    <label for="star69" title="text"> 4 stars</label>
+                    <input type="radio" id="star70" name="stars" value="5">
+                    <label for="star70" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+
+            <div class="zoom" id="Jordan-1-red">
+                <img src="/images/women/jordans 1/FD4810_061_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 1 Causal Shoess</h3>
+                <h4>$140.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star71" name="stars" value="1">
+                    <label for="star71" title="text"> 1 star</label>
+                    <input type="radio" id="star72" name="stars" value="2">
+                    <label for="star72" title="text"> 2 stars</label>
+                    <input type="radio" id="star73" name="stars" value="3">
+                    <label for="star73" title="text"> 3 stars</label>
+                    <input type="radio" id="star74" name="stars" value="4">
+                    <label for="star74" title="text"> 4 stars</label>
+                    <input type="radio" id="star75" name="stars" value="5">
+                    <label for="star75" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Jordan-1-low-yellow">
+                <img src="/images/women/jordan 1 low /DC0774_170_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 1 Low Causal Shoes</h3>
+                <h4>$115.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star76" name="stars" value="1">
+                    <label for="star76" title="text"> 1 star</label>
+                    <input type="radio" id="star77" name="stars" value="2">
+                    <label for="star77" title="text"> 2 stars</label>
+                    <input type="radio" id="star78" name="stars" value="3">
+                    <label for="star78" title="text"> 3 stars</label>
+                    <input type="radio" id="star79" name="stars" value="4">
+                    <label for="star79" title="text"> 4 stars</label>
+                    <input type="radio" id="star80" name="stars" value="5">
+                    <label for="star80" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+            
+            <div class="zoom" id="Jordan-1-low-green">
+                <img src="/images/women/jordan 1 low /DC0774_113_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 1 Low Causal Shoess</h3>
+                <h4>$115.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star81" name="stars" value="1">
+                    <label for="star81" title="text"> 1 star</label>
+                    <input type="radio" id="star82" name="stars" value="2">
+                    <label for="star82" title="text"> 2 stars</label>
+                    <input type="radio" id="star83" name="stars" value="3">
+                    <label for="star83" title="text"> 3 stars</label>
+                    <input type="radio" id="star84" name="stars" value="4">
+                    <label for="star84" title="text"> 4 stars</label>
+                    <input type="radio" id="star85" name="stars" value="5">
+                    <label for="star85" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Jordan-3">
+                <img src="/images/women/jordan 3/FJ9479_100_P1.jpeg">
+                <h4>1 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 3 Causal Shoes</h3>
+                <h4>$210.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star86" name="stars" value="1">
+                    <label for="star86" title="text"> 1 star</label>
+                    <input type="radio" id="star87" name="stars" value="2">
+                    <label for="star87" title="text"> 2 stars</label>
+                    <input type="radio" id="star88" name="stars" value="3">
+                    <label for="star88" title="text"> 3 stars</label>
+                    <input type="radio" id="star89" name="stars" value="4">
+                    <label for="star89" title="text"> 4 stars</label>
+                    <input type="radio" id="star90" name="stars" value="5">
+                    <label for="star90" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Jordan-6">
+                <img src="/images/women/jordan 6/FD1643_300_P1.jpeg">
+                <h4>1 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 6  Causal Shoess</h3>
+                <h4>$210.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star91" name="stars" value="1">
+                    <label for="star91" title="text"> 1 star</label>
+                    <input type="radio" id="star92" name="stars" value="2">
+                    <label for="star92" title="text"> 2 stars</label>
+                    <input type="radio" id="star93" name="stars" value="3">
+                    <label for="star93" title="text"> 3 stars</label>
+                    <input type="radio" id="star94" name="stars" value="4">
+                    <label for="star94" title="text"> 4 stars</label>
+                    <input type="radio" id="star95" name="stars" value="5">
+                    <label for="star95" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Puma-rs-cottoncandy">
+                <img src="/images/women/puma/39249701_100_P1.jpeg">
+                <h4>2 colors</h4>
+                <hr>
+                <h3>Women's Puma RS-Pulsoid  Causal Shoes</h3>
+                <h4>$110.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star96" name="stars" value="1">
+                    <label for="star96" title="text"> 1 star</label>
+                    <input type="radio" id="star67" name="stars" value="2">
+                    <label for="star97" title="text"> 2 stars</label>
+                    <input type="radio" id="star98" name="stars" value="3">
+                    <label for="star98" title="text"> 3 stars</label>
+                    <input type="radio" id="star99" name="stars" value="4">
+                    <label for="star99" title="text"> 4 stars</label>
+                    <input type="radio" id="star100" name="stars" value="5">
+                    <label for="star100" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+            <div class="zoom" id="Puma-rs-cream">
+                <img src="/images/women/puma/39249706_100_P1.jpeg">
+                <h4>1 colors</h4>
+                <hr>
+                <h3>Women's Air Jordan Retro 6  Causal Shoess</h3>
+                <h4>$210.00</h4>
+                <div class ="stars">
+                    <input type="radio" id="star101" name="stars" value="1">
+                    <label for="star101" title="text"> 1 star</label>
+                    <input type="radio" id="star102" name="stars" value="2">
+                    <label for="star102" title="text"> 2 stars</label>
+                    <input type="radio" id="star103" name="stars" value="3">
+                    <label for="star103" title="text"> 3 stars</label>
+                    <input type="radio" id="star104" name="stars" value="4">
+                    <label for="star104" title="text"> 4 stars</label>
+                    <input type="radio" id="star105" name="stars" value="5">
+                    <label for="star105" title="text"> 5 stars</label>
+                        
+                </div>
+            </div>
+
+        </section>
         <script>
-            createItemDisplay(); // 
         </script>
     </div>
 </body>
