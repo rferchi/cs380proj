@@ -27,13 +27,8 @@ class Item
     name = "";
     // Description
     description = "";
-    // Big image names
-    bigImageNames = [];
-    // Medium image names (item preview)
-    mediumImageNames = [];                      // divide idx by 2
-    // Small image names (thumbnails)
-    smallImageNames = [];
-
+    // image names (2d array due to colors using different images)
+    imageNames = [ [], [] ];
     // Which category does this item belong to? 0-General 1-Men 2-Women 3-Boys 4-Girls
     category = 0; 
 

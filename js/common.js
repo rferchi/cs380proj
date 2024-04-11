@@ -65,30 +65,39 @@ function createItemDisplay()
       for ( let c = 0; c < 4; c++ )          // 4 cells per row
       {
          // <td class="item-element">
-         let cell = row.insertCell(c);
+         let cell = row.insertCell( c );
          cell.setAttribute( "class", "item-element" );
 
-         // <img src="IMAGENAME" alt="ITEMNAME">
-         let img = document.createElement( "img" );
-         img.setAttribute( "src", `${items[counter].mediumImageNames[0]}` );
-         img.setAttribute( "alt", `${items[counter].name}`);
-         cell.appendChild( img );
+         // <div id="item-card-1..2..3">
+         let div = document.createElement( "div" );
+         div.setAttribute( "id", `item-card-${counter}` );
+         cell.appendChild( div );
 
-         // <p class="item-price">ITEMPRICE</p> 
-         let p = document.createElement( "p" );
-         p.setAttribute( "class", "item-price" );
-         p.appendChild( document.createTextNode(`${items[counter].price}`) );
-         cell.appendChild( p );
+         // <img class="item-preview" src="IMAGENAME" alt="ITEMNAME">
+         let img = document.createElement( "img" );
+         img.setAttribute( "class", "item-preview" );
+         img.setAttribute( "src", `${items[counter].imageNames[0][1]}` );
+         img.setAttribute( "alt", `${items[counter].name}`);
+         div.appendChild( img );
+
+         // <div id="item-info-1..2..3>"
+         let div2 = document.createElement( "div" );
+         div2.setAttribute( "id", `item-info-${counter}` );
+         div.appendChild( div2 );
 
          // <p class="item-name">ITEMNAME</p> 
-         let p2 = document.createElement( "p" );
-         p2.setAttribute( "class", "item-name" );
-         p2.appendChild( document.createTextNode(`${items[counter].name}`) );
-         cell.appendChild( p2 );
+         let p = document.createElement( "p" );
+         p.setAttribute( "class", "item-name" );
+         p.appendChild( document.createTextNode(`${items[counter].name}`) );
+         div2.appendChild( p );
 
-         cell.addEventListener("click", (event) => {
-            window.location.href = "shoppingitementry.html" + `?item=${items[c].name}`; 
-         } );
+         // <p class="item-price">ITEMPRICE</p> 
+         let p2 = document.createElement( "p" );
+         p2.setAttribute( "class", "item-price" );
+         p2.appendChild( document.createTextNode(`${items[counter].price}`) );
+         div2.appendChild( p2 );
+
+         window.location.href = `shoppingitementry.html?item=${items[counter].name}`; 
 
          // TODO: Put this on the shopping page.
          // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>

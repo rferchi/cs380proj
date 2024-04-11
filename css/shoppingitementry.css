@@ -1,0 +1,6 @@
+/* https://stackoverflow.com/a/43234538 */
+.filled-circle {
+    padding: 2px 11px;
+    border-radius: 100%;
+    background-color: #000000;
+  }    

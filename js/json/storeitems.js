@@ -3,16 +3,19 @@ var storecontent = `[
     {
         "name": "TestShoe",
         "description" : "This is a test description.",
-        "bigImageNames:" [
-            "images/shoeitem.png"
+        "imageNames": [
+            [0, "images/shoeitem.png",
+                "images/shoeitem.png",
+                "images/shoeitem.png",
+                "images/shoeitem.png" ],  
+
+            [1, "images/shoeitem.png",
+                "images/shoeitem.png",
+                "images/shoeitem.png",
+                "images/shoeitem.png" ]
         ],
-        "mediumImageNames" : [
-            "images/shoeitem.png"
-        ]
-        "smallImageNames:" [
-            "images/shoeitem.png"
-        ],
-        "category:" "0",
+
+        "category": "0",
         "price" : "10.00",
         "sizes" : [
             "10",
@@ -21,9 +24,7 @@ var storecontent = `[
         ],
         "colors" : [
             "red",
-            "blue",
-            "yellow",
-            "#2BCDD8"
+            "blue"
         ],
         "sale": 0.2,
         "tax": 0.07,
@@ -33,21 +34,20 @@ var storecontent = `[
     {
         "name" : "Women's Nike Blazer Mid '77 Casual Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/nike blazers/CZ1055_118_P1.jpeg",
-            "images/women/nike blazers/CZ1055_118_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/nike blazers/CZ1055_118_P1.jpeg",
-            "images/women/nike blazers/CZ1055_118_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/nike blazers/CZ1055_118_P1.jpeg",
-            "images/women/nike blazers/CZ1055_118_P1.jpeg"
+        "imageNames": [
+            [0, "images/women/nike blazers/CZ1055_100_P1.jpeg",
+                "images/women/nike blazers/CZ1055_100_P2.jpeg",
+                "images/women/nike blazers/CZ1055_100_P3.jpeg",
+                "images/women/nike blazers/CZ1055_100_P4.jpeg" ],
+                
+            [1, "images/women/nike blazers/CZ1055_118_P1.jpeg",
+                "images/women/nike blazers/CZ1055_118_P1.jpeg",
+                "images/women/nike blazers/CZ1055_118_P1.jpeg",
+                "images/women/nike blazers/CZ1055_118_P1.jpeg" ]
         ],
         "category": "2",
         "price": "105.00",
-        "sizes" [
+        "sizes" : [
             "8",
             "9",
             "10"
@@ -63,21 +63,23 @@ var storecontent = `[
     {  
         "name" : "Women's Nike Dunk Low Retro Casual Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/nike dunks/DD1503_101_P1.jpeg",
-            "images/women/nike dunks/DD1503_118_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/nike dunks/DD1503_101_P1.jpeg",
-            "images/women/nike dunks/DD1503_118_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/nike dunks/DD1503_101_P1.jpeg",
-            "images/women/nike dunks/DD1503_118_P1.jpeg"
+        "imageNames": [
+            
+            [0, "images/women/nike dunks/DD1503_101_P1.jpeg",
+                "images/women/nike dunks/DD1503_101_P2.jpeg",
+                "images/women/nike dunks/DD1503_101_P3.jpeg",
+                "images/women/nike dunks/DD1503_101_P4.jpeg" ],                                           
+
+            [1, "images/women/nike blazers/CZ1055_118_P1.jpeg",
+                "images/women/nike blazers/CZ1055_118_P2.jpeg",
+                "images/women/nike blazers/CZ1055_118_P3.jpeg",
+                "images/women/nike blazers/CZ1055_118_P4.jpeg" ]
+
+
         ],
         "category": "2",
         "price": "100.00",
-        "sizes" [
+        "sizes" : [
             "9",
             "10",
             "11"
@@ -93,21 +95,21 @@ var storecontent = `[
     {  
         "name" : "Women's Nike Air Force 1 '07 CASUAL SHOES",
         "description": "",
-        "bigImageNames:" [
-            "images/women/nike force/DD8959_100_P2.jpeg",
-            "images/women/nike force/DD8959_115_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/nike force/DD8959_100_P2.jpeg",
-            "images/women/nike force/DD8959_115_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/nike force/DD8959_100_P2.jpeg",
-            "images/women/nike force/DD8959_115_P1.jpeg"
+        "imageNames": [
+
+            [0, "images/women/nike force/DD8959_100_P1.jpeg",
+                "images/women/nike force/DD8959_100_P2.jpeg",
+                "images/women/nike force/DD8959_100_P3.jpeg",
+                "images/women/nike force/DD8959_100_P4.jpeg" ],                                           
+
+            [1, "images/women/nike force/DD8959_115_P1.jpeg",
+                "images/women/nike force/DD8959_115_P2.jpeg",
+                "images/women/nike force/DD8959_115_P3.jpeg",
+                "images/women/nike force/DD8959_115_P4.jpeg" ]
         ],
         "category": "2",
         "price": "80.00",
-        "sizes" [
+        "sizes" : [
             "9",
             "10",
             "11"
@@ -123,21 +125,20 @@ var storecontent = `[
     {  
         "name" : "Women's Nike Air Vapormax Plus Running Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/nike vapormax/FD0823_500_P1.jpeg",
-            "images/women/nike vapormax/FZ3614_686_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/nike vapormax/FD0823_500_P1.jpeg",
-            "images/women/nike vapormax/FZ3614_686_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/nike vapormax/FD0823_500_P1.jpeg",
-            "images/women/nike vapormax/FZ3614_686_P1.jpeg"
+        "imageNames": [
+             [0, "images/women/nike vapormax/FD0823_500_P1.jpeg",
+                "images/women/nike vapormax/FD0823_500_P2.jpeg",
+                "images/women/nike vapormax/FD0823_500_P3.jpeg",
+                "images/women/nike vapormax/FD0823_500_P4.jpeg" ],                                           
+
+            [1, "images/women/nike vapormax/FZ3614_686_P1.jpeg",
+                "images/women/nike vapormax/FZ3614_686_P2.jpeg",
+                "images/women/nike vapormax/FZ3614_686_P3.jpeg",
+                "images/women/nike vapormax/FZ3614_686_P4.jpeg" ]
         ],
         "category": "2",
         "price": "210.00",
-        "sizes" [
+        "sizes" : [
             "7",
             "8",
             "9"
@@ -153,21 +154,20 @@ var storecontent = `[
     {  
         "name" : "Women's New Balance 530 Causal Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/new blance/MR530CK_161_P1.jpeg",
-            "images/women/new blance/MR530OW_108_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/new blance/MR530CK_161_P1.jpeg",
-            "images/women/new blance/MR530OW_108_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/new blance/MR530CK_161_P1.jpeg",
-            "images/women/new blance/MR530OW_108_P1.jpeg"
+        "imageNames": [
+            [0, "images/women/new blance/MR530CK_161_P1.jpeg",
+                "images/women/new blance/MR530CK_161_P2.jpeg",
+                "images/women/new blance/MR530CK_161_P3.jpeg",
+                "images/women/new blance/MR530CK_161_P4.jpeg" ],                                           
+
+            [1, "images/women/new blance/MR530OW_108_P1.jpeg",
+                "images/women/new blance/MR530OW_108_P2.jpeg",
+                "images/women/new blance/MR530OW_108_P3.jpeg",
+                "images/women/new blance/MR530OW_108_P4.jpeg" ]
         ],
         "category": "2",
         "price": "100.00",
-        "sizes" [
+        "sizes" : [
             "7",
             "8",
             "9"
@@ -183,26 +183,28 @@ var storecontent = `[
     {  
         "name" : "Women's New Balance 550 Causal Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/NB 550/BBW550BB_100_P1.jpeg",
-            "images/women/NB 550/BBW550BI_073_P1.jpeg",
-            "images/women/NB 550/BBW550JS_108_P2.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/NB 550/BBW550BB_100_P1.jpeg",
-            "images/women/NB 550/BBW550BI_073_P1.jpeg",
-            "images/women/NB 550/BBW550JS_108_P2.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/NB 550/BBW550BB_100_P1.jpeg",
-            "images/women/NB 550/BBW550BI_073_P1.jpeg",
-            "images/women/NB 550/BBW550JS_108_P2.jpeg"
+        "imageNames": [
+             [0, "images/women/NB 550/BBW550BB_100_P1.jpeg",
+                "images/women/NB 550/BBW550BB_100_P2.jpeg",
+                "images/women/NB 550/BBW550BB_100_P3.jpeg",
+                "images/women/NB 550/BBW550BB_100_P4.jpeg" ],                                           
+
+            [1, "images/women/NB 550/BBW550BI_073_P1.jpeg",
+                "images/women/NB 550/BBW550BI_073_P2.jpeg",
+                "images/women/NB 550/BBW550BI_073_P3.jpeg",
+                "images/women/NB 550/BBW550BI_073_P4.jpeg" ],
+
+            [2, "images/women/NB 550/BBW550JS_108_P1.jpeg",
+                "images/women/NB 550/BBW550JS_108_P2.jpeg",
+                "images/women/NB 550/BBW550JS_108_P3.jpeg",
+                "images/women/NB 550/BBW550JS_108_P4.jpeg" ]
         ],
         "category": "2",
         "price": "120.00",
-        "sizes" [
-            "8",
+        "sizes" : [
             "9",
+            "10",
+            "11"
         ],
         "colors" : [
             "grey",
@@ -216,33 +218,136 @@ var storecontent = `[
     {  
         "name" : "Women's Air Jordan Retro 1 Causal Shoes",
         "description": "",
-        "bigImageNames:" [
-            "images/women/jordans 1/BQ6472_140_P1.jpeg",
-            "images/women/jordans 1/FD4810_061_P1.jpeg"
-        ],
-        "mediumImageNames:" [
-            "images/women/jordans 1/BQ6472_140_P1.jpeg",
-            "images/women/jordans 1/FD4810_061_P1.jpeg"
-        ],
-        "smallImageNames:" [
-            "images/women/jordans 1/BQ6472_140_P1.jpeg",
-            "images/women/jordans 1/FD4810_061_P1.jpeg"
+        "imageNames": [
+            [0, "images/women/jordans 1/BQ6472_140_P1.jpeg",
+                "images/women/jordans 1/BQ6472_140_P2.jpeg",
+                "images/women/jordans 1/BQ6472_140_P3.jpeg",
+                "images/women/jordans 1/BQ6472_140_P4.jpeg" ],                                           
+
+            [1, "images/women/jordans 1/FD4810_061_P1.jpeg",
+                "images/women/jordans 1/FD4810_061_P2.jpeg",
+                "images/women/jordans 1/FD4810_061_P3.jpeg",
+                "images/women/jordans 1/FD4810_061_P4.jpeg" ]
         ],
         "category": "2",
         "price": "140.00",
-        "sizes" [
+        "sizes" : [
             "8",
-            "9"
+            "9",
+            "10"
         ],
         "colors" : [
             "blue",
             "red"
         ],
+        "sale": 0.1,
+        "tax" : 0.07,
+        "shipping": 0.00
+    },
+    {  
+        "name" : "Women's Air Jordan Retro 1 Low Causal Shoes",
+        "description": "",
+        "imageNames": [
+            [0, "images/women/jordan 1 low/DC0774_170_P1.jpeg",
+                "images/women/jordan 1 low/DC0774_170_P2.jpeg",
+                "images/women/jordan 1 low/DC0774_170_P3.jpeg",
+                "images/women/jordan 1 low/DC0774_170_P4.jpeg" ],                                           
+
+            [1, "images/women/jordan 1 low/DC0774_113_P1.jpeg",
+                "images/women/jordan 1 low/DC0774_113_P2.jpeg",
+                "images/women/jordan 1 low/DC0774_113_P3.jpeg",
+                "images/women/jordan 1 low/DC0774_113_P4.jpeg" ]
+        ],
+        "category": "2",
+        "price": "115.00",
+        "sizes" : [
+            "8",
+            "9",
+            "10"
+        ],
+        "colors" : [
+            "yellow",
+            "green"
+        ],
+        "sale": 0.3,
+        "tax" : 0.07,
+        "shipping": 0.00
+    },
+    {  
+        "name" : "Women's Air Jordan Retro 3 Causal Shoes",
+        "description": "",
+        "imageNames": [
+            [0, "images/women/jordan 3/FJ9479_100_P1.jpeg",
+                "images/women/jordan 3/FJ9479_100_P2.jpeg",
+                "images/women/jordan 3/FJ9479_100_P3.jpeg",
+                "images/women/jordan 3/FJ9479_100_P4.jpeg" ]
+        ],
+        "category": "2",
+        "price": "210.00",
+        "sizes" : [
+            "8",
+            "9",
+            "10"
+        ],
+        "colors" : [
+            "white"
+        ],
         "sale": 0,
         "tax" : 0.07,
         "shipping": 0.00
     },
-    
+    {  
+        "name" : "Women's Air Jordan Retro 6 Causal Shoes",
+        "description": "",
+        "imageNames": [
+            [0, "images/women/jordan 6/FD1643_300_P1.jpeg",
+                "images/women/jordan 6/FD1643_300_P2.jpeg",
+                "images/women/jordan 6/FD1643_300_P3.jpeg",
+                "images/women/jordan 6/FD1643_300_P4.jpeg" ]
+        ],
+        "category": "2",
+        "price": "210.00",
+        "sizes" : [
+            "8",
+            "9",
+            "10"
+        ],
+        "colors" : [
+            "brown"
+        ],
+        "sale": 0,
+        "tax" : 0.07,
+        "shipping": 0.00
+    },
+    {  
+        "name" : "Women's Puma RS-Pulsoid Causal Shoes",
+        "description": "",
+        "imageNames": [
+            [0, "images/women/puma/39249701_100_P1.jpeg",
+                "images/women/puma/39249701_100_P2.jpeg",
+                "images/women/puma/39249701_100_P3.jpeg",
+                "images/women/puma/39249701_100_P4.jpeg" ],                                           
 
+            [1, "images/women/puma/39249706_100_P1.jpeg",
+                "images/women/puma/39249706_100_P2.jpeg",
+                "images/women/puma/39249706_100_P3.jpeg",
+                "images/women/puma/39249706_100_P4.jpeg" ]
+        ],
+        "category": "2",
+        "price": "110.00",
+        "sizes" : [
+            "8",
+            "9",
+            "10"
+        ],
+        "colors" : [
+            "brown",
+            "#FF5733"
+        ],
+        "sale": 0,
+        "tax" : 0.07,
+        "shipping": 0.00
+    }
+    
 
 ]`;
