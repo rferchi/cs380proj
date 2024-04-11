@@ -27,20 +27,21 @@ class Item
     name = "";
     // Description
     description = "";
-
     // Big image names
     bigImageNames = [];
-
     // Medium image names (item preview)
-    mediumImageNames = [];
-
+    mediumImageNames = [];                      // divide idx by 2
     // Small image names (thumbnails)
     smallImageNames = [];
+
+    // Which category does this item belong to? 0-General 1-Men 2-Women 3-Boys 4-Girls
+    category = 0; 
+
     // Price
     price = "";
     // Sizes. These will be strings.
     sizes = [];
-    // List of colors in hex. This will be displayed on the page as a circle with the color inside.
+    // List of colors in hex (or css color defs). This will be displayed on the page as a circle with the color inside. MATCH THESE COLORS WITH THE IMAGE NAMES FOR COLOR IMAGES.
     colors = [];
     // Sale - optional. Will modify the pricing. 
     sale = 0;
