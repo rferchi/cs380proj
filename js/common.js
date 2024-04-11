@@ -76,7 +76,7 @@ function createItemDisplay()
          // <img class="item-preview" src="IMAGENAME" alt="ITEMNAME">
          let img = document.createElement( "img" );
          img.setAttribute( "class", "item-preview" );
-         img.setAttribute( "src", `${items[counter].imageNames[0][1]}` );
+         img.setAttribute( "src", `${items[counter].imageNames[0][0]}` );
          img.setAttribute( "alt", `${items[counter].name}`);
          div.appendChild( img );
 
@@ -94,10 +94,11 @@ function createItemDisplay()
          // <p class="item-price">ITEMPRICE</p> 
          let p2 = document.createElement( "p" );
          p2.setAttribute( "class", "item-price" );
-         p2.appendChild( document.createTextNode(`${items[counter].price}`) );
+         p2.appendChild( document.createTextNode(`$${items[counter].price}`) );
          div2.appendChild( p2 );
 
-         window.location.href = `shoppingitementry.html?item=${items[counter].name}`; 
+
+         //window.location.href = `shoppingitementry.html?item=${items[counter].name}`; 
 
          // TODO: Put this on the shopping page.
          // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>
@@ -117,9 +118,19 @@ function createItemDisplay()
          if ( counter >= itemslength )
          {
             // Return early, we've run out of items to display.
+            table.addEventListener( "click", (e) =>
+            {
+               if ( e.target.nodeName !== "DIV")
+                  return;
+         
+               let td = e.target;
+               console.log(td);
+            });
             return;
          }
 
       }
    }
+   
+
 }

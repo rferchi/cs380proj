@@ -1,4 +1,4 @@
-window.addEventListener( "load", createItemEntry )
+//window.addEventListener( "load", createItemEntry )
 
 function createItemEntry()
 {
@@ -7,31 +7,25 @@ function createItemEntry()
 
     let item = FindItemByName( itemname );
 
-    let div = document.createElement( "div" );
-    div.setAttribute( "id", "item-card" );
-    div.setAttribute( "class", "inline" );
-    document.body.appendChild( div );
+    let div = document.getElementById( "item-container" );
 
-    let div2 = document.createElement( "div" );
-    div2.setAttribute( "id", "item-images" );
-    div.appendChild( div2 );
+    let div2 = document.getElementById( "item-card" );
+
+    let div3 = document.getElementById( "item-images" );
 
     let img = document.createElement( "img" );
     // add big image thing
     img.setAttribute( "id", "image-big-preview");
-    img.setAttribute( "src", `${ item.imageNames[0][1] }`);
+    img.setAttribute( "src", `${ item.imageNames[0][0] }`);
     img.setAttribute( "alt", `${ item.name }` );
-    div2.appendChild( img );
+    div3.appendChild( img );
 
-    let div3 = document.createElement( "div" );
-    div3.setAttribute( "id", "item-small-images" );
-    //div3.setAttribute( "class", "inline" );
+    let div4 = document.getElementById( "image-small-preview" );
 
-    // Partitioning image array for multiple colors
     let length = item.imageNames[0].length;
 
-    // Start at 1 to skip the color definition
-    for ( let i = 1; i < length; i++ )
+    // loop through the images
+    for ( let i = 0; i < length; i++ )
     {
         let img_small = document.createElement( "img" );
         
@@ -45,28 +39,23 @@ function createItemEntry()
             bigimg.setAttribute( "alt", `${ item.name }` );
         });
 
-        div3.appendChild( img_small );
+        div4.appendChild( img_small );
     }
-    div2.appendChild( div3 );
 
 
-    let div4 = document.createElement( "div" );
-    div4.setAttribute( "id", "item-details" );
-    div.setAttribute( "class", "inline" );
-    document.body.appendChild( div4 );
+    let div5 = document.getElementById( "item-details" );
 
     // name
     let h1 = document.createElement( "h1" );
     h1.appendChild( document.createTextNode( `${ item.name }` ) );
-    div4.appendChild( h1 );
+    div5.appendChild( h1 );
 
     // price
     let p = document.createElement( "p" );
     p.appendChild( document.createTextNode( `$${ item.price }` ) );
-    div4.appendChild( p );
+    div5.appendChild( p );
 
-    let div5 = document.createElement( "div" );
-    div5.setAttribute( "class", "color-displays" );
+    let div6 = document.createElement( "div" );
 
     // inline
     let colors_length = item.colors.length;
@@ -76,16 +65,9 @@ function createItemEntry()
         span.setAttribute( "class", "filled-circle" );
         span.style.backgroundColor = item.colors[i];
 
-        span.addEventListener( "click", (e) =>
-        {
-            // add click to change all of the images to the specified color
-
-        });
-
-        div5.appendChild( span );
+        // click to change image colors
+        div6.appendChild( span );
     }
-
-    div4.appendChild( div5 );
 
 
 
