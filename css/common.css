@@ -64,8 +64,13 @@ div#navbar-right {
 }
 
 .inline {
+    display: inline;
+}
+
+.inline-block {
     display: inline-block;
 }
+
 
 .item-element {
     border-style: groove;
@@ -73,14 +78,23 @@ div#navbar-right {
     text-align: center;
 }
 
-img.item-preview {
+img.image-small-preview {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+}
+
+img.image-preview {
     width: 200px;
     height: 200px;
 }
 
-img.image-small-preview {
-    width: 100px;
-    height: 100px;
-    border: solid;
+img.image-big-preview {
+    width: 400px;
+    height: 400px;
 }
 
+img.selected {
+    border-style: solid;
+    border-color: gray;
+}

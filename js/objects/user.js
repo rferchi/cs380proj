@@ -117,9 +117,25 @@ class User
     {
         // Don't check if there's nothing.
         let size = this.cart.Items.length;
-        let i = 0;
-        for ( i = 0; i < size; i++ )
+        for ( let i = 0; i < size; i++ )
         {
+            // My lord
+            if ( itemname == this.cart.Items[i].name )
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    FindItemInWishList( itemname )
+    {
+        // Don't check if there's nothing.
+        let size = this.Wishlist.length;
+        for ( let i = 0; i < size; i++ )
+        {
+            // My lord
             if ( itemname == this.cart.Items[i].name )
             {
                 return i;
@@ -130,7 +146,7 @@ class User
     }
 
     // Add the item via object.
-    AddItemToCart( itemname )
+    AddItemToCart( itemname, color, size )
     {
         let idx = this.FindItemInCart( itemname );
         if ( idx > -1 )
@@ -143,14 +159,17 @@ class User
         let item = FindItemByName( itemname );
         if ( item )
         {
-            this.cart.Items.push( item );
+            let selecteditem = item;
+            selecteditem.selectedColor = color;
+            selecteditem.selectedSize = size;
+            this.cart.Items.push( selecteditem );
             User.SaveUser( this );
         }
         else
         {
-            // TODO: Redirect to an error website
-            window.location.href = "about:blank";
+            alert(`Failed to add ${itemname} to your cart`);
         }
+        alert( `Added ${itemname} to your cart` );
         console.log(`Added ${itemname} to cart`);
     }
 
@@ -166,6 +185,9 @@ class User
         }
 
         User.SaveUser( this );
+
+        alert( `Removed ${itemname} to your cart` );
+        console.log(`Removed ${itemname} to cart`);
     }
 
     RemoveAllFromCart()
@@ -173,6 +195,53 @@ class User
         this.cart.Items.clear();
         User.SaveUser( this );
     }
+
+    AddItemToWishList( itemname, color, size )
+    {
+        let idx = this.FindItemInWishList( itemname );
+        if ( idx > -1 )
+        {
+            alert("You already have this item in your wishlist!");
+            return;
+        }
+
+        // Find the item in the store and add it to the cart.
+        let item = FindItemByName( itemname );
+        if ( item )
+        {
+            let selecteditem = item;
+            selecteditem.selectedColor = color;
+            selecteditem.selectedSize = size;
+            this.Wishlist.push( selecteditem );
+            User.SaveUser( this );
+            alert(`Added ${itemname} to wishlist`);
+            console.log(`Added ${itemname} to wishlist`);
+        }
+        else
+        {
+            // TODO: Redirect to an error website
+            console.error( `Failed to add ${itemname} to wishlist` );
+        }
+    }
+
+    RemoveItemFromWishList( itemname, color, size )
+    {
+        let idx = this.FindItemInWishList( itemname );
+            
+        // If it's valid, remove the item.
+        if ( idx > -1 )
+        {
+            this.Wishlist = this.Wishlist.splice( idx, 1 );
+        }
+
+        User.SaveUser( this );
+    }
+
+    RemoveAllFromWishList()
+    {
+        this.Wishlist.clear();
+    }
+
 
     // Static function to save your progress on shopping.
     static SaveUser( user )

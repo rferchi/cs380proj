@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/json/storeitems.js"></script>
-
-    <!-- TODO: make js to generate this nav bar so I don't have to modify 5 variants of this every time a change happens -->
+<style>
+    #navbar-center {
+        margin: auto;
+        padding:auto;
+    }
+    
+</style>
 
     <nav>
         <!-- logo -->
@@ -26,7 +31,7 @@
             </ul>
         </div>
 
-        <!--
+        
         <div id="navbar-right">
             <div class="inline">
                 <form id="searchform" name="" action="searchresults.html" method="GET">
@@ -35,14 +40,16 @@
                 </form>
             </div>
         </div>
-        -->
+        
     </nav>
+
 </head>
 
 <body>
     <script src="js/objects/item.js"></script>
     <script src="js/objects/cart.js"></script>
     <script src="js/objects/user.js"></script> 
+    <script src="js/globals.js"></script>
     <script src="js/common.js"></script>
     
     <div class="table-container">

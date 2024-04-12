@@ -1,5 +1,9 @@
-const items = JSON.parse( storecontent ); 
-const user = User.CreateUser( window.localStorage.getItem( "user" ) );
+/* https://stackoverflow.com/a/18679592 */
+// Count the amount of words in a string
+function countWords( str ) 
+{
+    return str.split(' ').length;
+}
 
 // clamp: function to clamp a value between the min and max values.
 // value: the value being clamped
@@ -38,6 +42,15 @@ function FindItemByName( itemname )
    return null;
 }
 
+function FindItemsByName( itemname )
+{
+   let size = items.length;
+   for ( let i = 0; i < size; i++ )
+   {
+   
+   }
+}
+
 /* Display functions */
 
 // table elements, via items parsed
@@ -64,6 +77,12 @@ function createItemDisplay()
       let row = table.insertRow( r );
       for ( let c = 0; c < 4; c++ )          // 4 cells per row
       {
+         // Did we run out of items?
+         if ( counter >= itemslength )
+         {
+            return;
+         }
+
          // <td class="item-element">
          let cell = row.insertCell( c );
          cell.setAttribute( "class", "item-element" );
@@ -71,11 +90,18 @@ function createItemDisplay()
          // <div id="item-card-1..2..3">
          let div = document.createElement( "div" );
          div.setAttribute( "id", `item-card-${counter}` );
+         div.setAttribute( "data-itemIdx", `${counter}`);
          cell.appendChild( div );
+         div.addEventListener( "click", () =>
+         {
+            // Pass the name to the url for the shopping entry page to decide
+            let num = parseInt( div.dataset.itemidx );
+            window.location.href = `shoppingitementry.html?item=${items[num].name}`;
+         });
 
-         // <img class="item-preview" src="IMAGENAME" alt="ITEMNAME">
+         // <img class="image-preview" src="IMAGENAME" alt="ITEMNAME">
          let img = document.createElement( "img" );
-         img.setAttribute( "class", "item-preview" );
+         img.setAttribute( "class", "image-preview" );
          img.setAttribute( "src", `${items[counter].imageNames[0][0]}` );
          img.setAttribute( "alt", `${items[counter].name}`);
          div.appendChild( img );
@@ -97,40 +123,8 @@ function createItemDisplay()
          p2.appendChild( document.createTextNode(`$${items[counter].price}`) );
          div2.appendChild( p2 );
 
-
-         //window.location.href = `shoppingitementry.html?item=${items[counter].name}`; 
-
-         // TODO: Put this on the shopping page.
-         // <button id="button-addtocart" name="button-addtocart" onclick="user.AddItemToCart(ITEM)">Add To Cart</button>
-         //let button = document.createElement( "button" );
-         //button.setAttribute( "id", "button-addtocart");
-         //button.setAttribute( "name", "button-addtocart");
-         //button.setAttribute( "onclick", `user.AddItemToCart( "${ items[counter].name }" )`);
-         //button.appendChild( document.createTextNode( "Add To Cart" ) );
-
-         // Attach the button to the cell itself, not the a
-         //cell.appendChild( button );
-
          // Increment the counter
          counter++;
-
-         // Did we run out of items?
-         if ( counter >= itemslength )
-         {
-            // Return early, we've run out of items to display.
-            table.addEventListener( "click", (e) =>
-            {
-               if ( e.target.nodeName !== "DIV")
-                  return;
-         
-               let td = e.target;
-               console.log(td);
-            });
-            return;
-         }
-
       }
    }
-   
-
 }

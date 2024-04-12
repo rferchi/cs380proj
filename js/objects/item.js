@@ -44,4 +44,8 @@ class Item
     tax = 0;
     // Shipping Price
     shipping = 0;
+
+    // Selected options if stored in a cart
+    selectedColor = "";
+    selectedSize = "";
 }

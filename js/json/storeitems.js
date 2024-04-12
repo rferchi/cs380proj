@@ -24,8 +24,8 @@ var storecontent = `[
             "14"
         ],
         "colors" : [
-            "red",
-            "blue"
+            "#FF0000",
+            "#0000FF"
         ],
         "sale": 0.2,
         "tax": 0.07,
@@ -34,7 +34,7 @@ var storecontent = `[
 
     {
         "name" : "Women's Nike Blazer Mid '77 Casual Shoes",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
             ["images/women/nike blazers/CZ1055_100_P1.jpeg",
             "images/women/nike blazers/CZ1055_100_P2.jpeg",
@@ -54,8 +54,8 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "black",
-            "pink"
+            "#000000",
+            "#FFC0CB"
         ],
         "sale": 0,
         "tax" : 0.07,
@@ -63,7 +63,7 @@ var storecontent = `[
     },
     {  
         "name" : "Women's Nike Dunk Low Retro Casual Shoes",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
             
             ["images/women/nike dunks/DD1503_101_P1.jpeg",
@@ -86,8 +86,8 @@ var storecontent = `[
             "11"
         ],
         "colors" : [
-            "black",
-            "#d2aa9e"
+            "#000000",
+            "#D2AA9E"
         ],
         "sale": 0.20,
         "tax" : 0.07,
@@ -95,7 +95,7 @@ var storecontent = `[
     },
     {  
         "name" : "Women's Nike Air Force 1 '07 CASUAL SHOES",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
 
             ["images/women/nike force/DD8959_100_P1.jpeg",
@@ -116,8 +116,8 @@ var storecontent = `[
             "11"
         ],
         "colors" : [
-            "white",
-            "orange"
+            "#FFFFFF",
+            "#FFA500"
         ],
         "sale": 0.10,
         "tax" : 0.07,
@@ -125,7 +125,7 @@ var storecontent = `[
     },
     {  
         "name" : "Women's Nike Air Vapormax Plus Running Shoes",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
              ["images/women/nike vapormax/FD0823_500_P1.jpeg",
             "images/women/nike vapormax/FD0823_500_P2.jpeg",
@@ -146,7 +146,7 @@ var storecontent = `[
         ],
         "colors" : [
             "#71BDD4", 
-            "pink"
+            "#FFC0CB"
         ],
         "sale": 0.25,
         "tax" : 0.07,
@@ -154,7 +154,7 @@ var storecontent = `[
     },
     {  
         "name" : "Women's New Balance 530 Causal Shoes",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
             ["images/women/new blance/MR530CK_161_P1.jpeg",
             "images/women/new blance/MR530CK_161_P2.jpeg",
@@ -174,8 +174,8 @@ var storecontent = `[
             "9"
         ],
         "colors" : [
-            "grey",
-            "beige"
+            "#808080",
+            "#F5F5DC"
         ],
         "sale": 0.0,
         "tax" : 0.07,
@@ -183,7 +183,7 @@ var storecontent = `[
     },
     {  
         "name" : "Women's New Balance 550 Causal Shoes",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis tellus id interdum velit laoreet id donec. Volutpat diam ut venenatis tellus in. Iaculis urna id volutpat lacus laoreet non. Volutpat blandit aliquam etiam erat velit. Sit amet consectetur adipiscing elit. Mauris ultrices eros in cursus turpis massa tincidunt. Turpis massa tincidunt dui ut ornare lectus sit amet. Quam lacus suspendisse faucibus interdum posuere. In hendrerit gravida rutrum quisque non. Tellus at urna condimentum mattis pellentesque id nibh. Arcu felis bibendum ut tristique et egestas quis. Habitant morbi tristique senectus et.",
         "imageNames": [
              ["images/women/NB 550/BBW550BB_100_P1.jpeg",
             "images/women/NB 550/BBW550BB_100_P2.jpeg",
@@ -208,8 +208,8 @@ var storecontent = `[
             "11"
         ],
         "colors" : [
-            "grey",
-            "green",
+            "#808080",
+            "#00FF00",
             "#E2DBD5"
         ],
         "sale": 0.5,
@@ -238,8 +238,8 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "blue",
-            "red"
+            "#0000FF",
+            "#FF0000"
         ],
         "sale": 0.1,
         "tax" : 0.07,
@@ -267,8 +267,8 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "yellow",
-            "green"
+            "#FFFF00",
+            "#00FF00"
         ],
         "sale": 0.3,
         "tax" : 0.07,
@@ -291,7 +291,7 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "white"
+            "#FFFFFF"
         ],
         "sale": 0,
         "tax" : 0.07,
@@ -314,7 +314,7 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "brown"
+            "#964B00"
         ],
         "sale": 0,
         "tax" : 0.07,
@@ -342,13 +342,11 @@ var storecontent = `[
             "10"
         ],
         "colors" : [
-            "brown",
+            "#964B00",
             "#FF5733"
         ],
         "sale": 0,
         "tax" : 0.07,
         "shipping": 0.00
     }
-    
-
 ]`;
